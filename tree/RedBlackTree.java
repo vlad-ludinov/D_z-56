@@ -1,3 +1,4 @@
+package tree;
 /**
  * красно-черное левосторонее дерево
  */
@@ -78,10 +79,10 @@ public class RedBlackTree {
                     needRebalance = true;
                     result = leftSwap(result);
                 }
-            if (result.getRigthChild() != null &&
-                result.getRigthChild().getColor() == Color.RED && 
-                result.getLeftChild() != null || 
-                result.getLeftChild().getColor() == Color.RED) {
+            if (result.getLeftChild() != null &&
+                result.getLeftChild().getColor() == Color.RED &&
+                result.getRigthChild() != null &&
+                result.getRigthChild().getColor() == Color.RED) {
                     needRebalance = true;
                     colorSwap(result);
                 }
@@ -156,7 +157,7 @@ public class RedBlackTree {
     private String space(int count) {
         String space = "";
         for (int i = 0; i < count; i++) {
-            space += " ";
+            space += "    ";
         }
         return space;
     }

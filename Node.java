@@ -1,5 +1,5 @@
 /**
- * Node
+ * класс Node, в нем есть значение, цвет, и левый и правый ребенки
  */
 public class Node {
 
@@ -11,6 +11,7 @@ public class Node {
 
     private Node leftChild = null;
 
+    // новый Node всегда красный
     public Node(int value) {
         this.value = value;
         this.color = Color.RED;
